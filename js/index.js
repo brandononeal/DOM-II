@@ -1,7 +1,8 @@
 // Your code goes here
+const links = document.querySelectorAll('a')
 const h1 = document.querySelector('h1')
+const h2 = document.querySelector('h2')
 const text = document.querySelector('p')
-const links = document.querySelector('a')
 const busImg = document.querySelector('.intro img')
 
 // from gsap - causes nav items to bounce on refresh
@@ -25,6 +26,14 @@ busImg.addEventListener('dblclick', function(event){
 })
 
 
-text.addEventListener('select', function(event){
-    
+// h2.addEventListener('select', function(event){
+//     h2.textContent.style.fontWeight = 'bold'
+// })
+
+
+// stops nav items from refreshing page
+links.forEach(function(link){
+    link.addEventListener('click', function(event){
+        event.preventDefault()
+    })
 })
